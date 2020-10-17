@@ -1,15 +1,11 @@
 /** components */
-import Link from 'next/link';
+import Home from '../features/Home/Home';
 import Layout from '../components/Layout/Layout';
 
-export default function Home() {
+export default function Index() {
     return (
         <Layout sectionName='home'>
-            <h1>Next.js Weather App</h1>
-            <div>Sun</div>
-            <Link href='/weather'>
-                <button>See Weather</button>
-            </Link>
+            <Home />
         </Layout>
     )
 }

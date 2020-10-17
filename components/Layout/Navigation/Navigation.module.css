@@ -16,4 +16,21 @@
     left: 0;
     animation-name: enter;
     animation-duration: .2s;
+    padding: 8px;
+    z-index: 5;
+}
+
+.nav-header {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.link {
+    padding: 0 0 16px 0;
+    color: azure;
 }

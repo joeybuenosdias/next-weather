@@ -3,7 +3,7 @@ import Layout from '../components/Layout/Layout';
 
 export default function Weather() {
     return (
-        <Layout>
+        <Layout sectionName='weather'>
             Weather Page
         </Layout>
     )
