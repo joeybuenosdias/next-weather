@@ -1,23 +1,17 @@
+import { useContext } from 'react';
 import LayoutContext from '../LayoutContext';
 
 export default function Navigation() {
-    return (
-        <LayoutContext.Consumer>
-            {({
-                isNavOpen,
-                setIsNavOpen,
-            }) => {
-                if (!isNavOpen) {
-                    return null;
-                }
+    const context = useContext(LayoutContext);
+    const { setIsNavOpen, isNavOpen } = context;
+    if (!isNavOpen) {
+        return null;
+    }
 
-                return (
-                    <nav>
-                        Navigation
-                        <button onClick={() => setIsNavOpen(false)}>Close</button>
-                    </nav>
-                )
-            }}
-        </LayoutContext.Consumer>
-    );
+    return (
+        <nav>
+            Navigation
+            <button onClick={() => setIsNavOpen(false)}>Close</button>
+        </nav>
+    )
 }
