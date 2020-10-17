@@ -1,13 +1,23 @@
-export default function Navigation({
-    isNavOpen,
-}) {
-    if(!isNavOpen) {
-        return null;
-    }
+import LayoutContext from '../LayoutContext';
 
+export default function Navigation() {
     return (
-        <nav>
-            Navigation
-        </nav>
+        <LayoutContext.Consumer>
+            {({
+                isNavOpen,
+                setIsNavOpen,
+            }) => {
+                if (!isNavOpen) {
+                    return null;
+                }
+
+                return (
+                    <nav>
+                        Navigation
+                        <button onClick={() => setIsNavOpen(false)}>Close</button>
+                    </nav>
+                )
+            }}
+        </LayoutContext.Consumer>
     );
 }
