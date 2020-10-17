@@ -1,0 +1,19 @@
+@keyframes enter {
+    from {
+        width: 0
+    }
+    to {
+        width: 75%
+    }
+}
+
+.nav {
+    position: fixed;
+    height: 100vh;
+    background-color: blue;
+    width: 75%;
+    top: 0;
+    left: 0;
+    animation-name: enter;
+    animation-duration: .2s;
+}
