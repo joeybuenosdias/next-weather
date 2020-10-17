@@ -1,8 +1,11 @@
+/** styles */
+import styles from './Content.module.css';
+
 export default function Content({
     children
 }) {
     return (
-        <div>
+        <div className={styles.content}>
             {children}
         </div>
     )
