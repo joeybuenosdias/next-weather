@@ -1,7 +1,10 @@
+/** components */
+import Layout from '../components/Layout/Layout';
+
 export default function Weather() {
     return (
-        <div>
+        <Layout>
             Weather Page
-        </div>
+        </Layout>
     )
 }

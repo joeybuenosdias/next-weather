@@ -1,7 +1,9 @@
-export default function Header () {
+export default function Header ({
+    setIsNavOpen
+}) {
     return (
         <header>
-            Header
+            <button onClick={() => setIsNavOpen(true)}>Menu</button>
         </header>
     )
 }
